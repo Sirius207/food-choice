@@ -1,16 +1,14 @@
 const request = require('request');
-
 const CONFIG = require('./config');
+const UTILS = require('./utils');
+
 const BOT = CONFIG.bot;
 const BASE_URL = `https://api.chatfuel.com/bots/${BOT.BOT_ID}/users/${BOT.USER_ID}/send?chatfuel_token=${BOT.chatfuel_token}&chatfuel_block_id=${BOT.PUSH_BLOCK_ID}`;
 
-function randomPickAStore() {
-  const id = Math.floor(Math.random() * CONFIG.stores.length);
-  return CONFIG.stores[id];
-}
+
 
 function getFullURL() {
-  const store_1 = randomPickAStore();
+  const store_1 = UTILS.randomPickAStore();
   const storeURL = `&store_1=${store_1}`;
   return BASE_URL + storeURL;
 }
