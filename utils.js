@@ -1,8 +1,10 @@
 const CONFIG = require('./config');
 
-function randomPickAStore(price = 'low') {
-  const id = Math.floor(Math.random() * CONFIG.stores[price].length);
-  return CONFIG.stores[price][id];
+function randomPickAStore(filter = {
+  price: 'low'
+}) {
+  const id = Math.floor(Math.random() * CONFIG.stores[filter.price].length);
+  return CONFIG.stores[filter.price][id];
 }
 
 module.exports = {randomPickAStore};
