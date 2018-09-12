@@ -6,14 +6,14 @@ const UTILS = require('../utils');
 
 router.get('/food', (req, res, next) => {
   const filter = {
-    price: req.query.price||'low',
+    price: req.query.price || 'low',
   }
   const store = UTILS.randomPickAStore(filter);
   const msg = {
-    "messages": [
-      {"text": store},
-    ]
-   }
+    "messages": [{
+      "text": store
+    }, ]
+  }
   res.json(msg)
 });
 

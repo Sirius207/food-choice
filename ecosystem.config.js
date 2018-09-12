@@ -13,8 +13,6 @@ module.exports = {
         COMMON_VARIABLE: "true"
       },
       env_production : {
-        // NODE_ENV: "production",
-        // PROD_PORT: 3000,
         TIME: '50 11 * * *',
       }
     },
@@ -25,8 +23,6 @@ module.exports = {
         COMMON_VARIABLE: "true"
       },
       env_production : {
-        // NODE_ENV: "production",
-        // PROD_PORT: 3000,
         TIME: '30 17 * * *',
       }
     },
