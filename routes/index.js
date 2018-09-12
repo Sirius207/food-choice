@@ -10,10 +10,10 @@ router.get('/food', (req, res, next) => {
   }
   const store = UTILS.randomPickAStore(filter);
   const msg = {
-    "messages": [
-      {"text": store},
-    ]
-   }
+    "messages": [{
+      "text": store
+    }, ]
+  }
   res.json(msg)
 });
 

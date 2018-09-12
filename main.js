@@ -1,4 +1,4 @@
 const cronJob = require('./cronjob');
 
-const cronTime = '45 17 * * *';
+const cronTime = process.event.TIME;
 cronJob(cronTime);
